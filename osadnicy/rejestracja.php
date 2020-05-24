@@ -59,7 +59,7 @@
 		}				
 		
 		//Bot or not? Oto jest pytanie!
-		$sekret = "6LdQ1O0UAAAAADStFXUU9iD5tzmxL1Uk6szgKtx2";
+		$sekret = "PODAJ WŁASNY SEKRET!";
 		
 		$sprawdz = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$sekret.'&response='.$_POST['g-recaptcha-response']);
 		
@@ -118,7 +118,7 @@
 				{
 					//Hurra, wszystkie testy zaliczone, dodajemy gracza do bazy
 					
-					if ($polaczenie->query("INSERT INTO uzytkownicy VALUES (NULL, '$nick', '$haslo_hash', '$email', 100, 100, 100, now() + INTERVAL 14 DAY,now())"))
+					if ($polaczenie->query("INSERT INTO uzytkownicy VALUES (NULL, '$nick', '$haslo_hash', '$email', 100, 100, 100, now() + INTERVAL 14 DAY)"))
 					{
 						$_SESSION['udanarejestracja']=true;
 						header('Location: witamy.php');
@@ -241,7 +241,7 @@
 			}
 		?>	
 		
-		<div class="g-recaptcha" data-sitekey="6LdQ1O0UAAAAAEnmH75AHpAaqq6L_dbdzTPyzq7l"></div>
+		<div class="g-recaptcha" data-sitekey="PODAJ WŁASNY SITEKEY!"></div>
 		
 		<?php
 			if (isset($_SESSION['e_bot']))

@@ -107,7 +107,7 @@
 		}
 		else
 		{
-			min = sminuta;
+			min = minuta;
 		}
 
 		if(miesiac < 10)
@@ -115,7 +115,7 @@
 			miech = "0" + miesiac;
 		}
 		
-		document.getElementById("clock").innerHTML =
+		document.getElementById("clock").innerHTML = 
 		dzien + "." + miech + "." + rok + " | " + godzina + ":" + min + ":" + sek;
 		
 		
@@ -172,6 +172,34 @@
 	else
 	echo "Premium nieaktywne od: ".$roznica->format('%y lat, %m mies, %d dni, %h godz, %i min, %s sek');	
 
+	
+?>
+
+    <div >
+		
+		
+		<form  method="post" action="wykupienie_premium.php" name="add_premium">
+			
+
+				<input type="hidden" name="add_premium"/>
+				
+				<h4> Wykup dzień premium za 1000 jednostek drewna </h4>
+				<p><input type="submit" value="Wykup" name="submit_btn"/></p>
+				
+				
+				
+		</form>
+		
+    </div>
+
+<?php
+
+	if($_SESSION['brak_drewna'] == 0)
+	echo "Nie stać cię na premium</br>";
+	else if ($_SESSION['brak_drewna'] == 1)
+	echo "Zakupiono dzień premium</br>";
+	else
+	echo "";
 	
 ?>
 

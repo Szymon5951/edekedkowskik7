@@ -8,6 +8,8 @@
 		exit();
 	}
 
+	$_SESSION['brak_drewna'] = 2;
+
 
 	if(isset($_POST['send']))
 	{
