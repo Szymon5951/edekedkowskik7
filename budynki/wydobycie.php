@@ -34,7 +34,7 @@
 				if($czas_ostatniego_wykopu < $czas_obecny)
 				{
 
-					$_SESSION['wykopany_kamien'] = rand(1, 100);
+					$_SESSION['wykopany_kamien'] = rand(40, 60);
 					$wykopany_kamien = $_SESSION['wykopany_kamien'];
 					$login = $_SESSION['user'];
 					
@@ -89,7 +89,7 @@
 				if($czas_ostatniej_wycinki < $czas_obecny)
 				{
 
-					$_SESSION['wyrabane_drewno'] = rand(1, 100);
+					$_SESSION['wyrabane_drewno'] = rand(40, 60);
 					$wyrabane_drewno = $_SESSION['wyrabane_drewno'];
 					$login = $_SESSION['user'];
 					

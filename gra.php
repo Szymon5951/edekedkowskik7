@@ -62,6 +62,8 @@
 	<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
 	
 
+	<meta http-equiv="refresh" content="3">
+
 	<script type="text/javascript" >
 			var rok = <?php $dataczas = new DateTime(); echo $dataczas->format('Y') ?>;
 		var miesiac = <?php $dataczas = new DateTime(); echo $dataczas->format('m') ?>;
@@ -212,8 +214,6 @@
 	unset($_SESSION['brak_drewna']);
 	
 	}
-
-	
 ?>
 
     <div id="strona">
@@ -238,6 +238,45 @@
 			</form>
 		</div>
     </div>
+	
+	
+
+
+			<form  method="post" action="losuj.php">
+
+				<input name="losuj_100" type="hidden" />
+				<p><input type="submit" value="Losuj 100" /></p>			
+				
+			</form>
+			
+			<form  method="post" action="losuj.php">
+
+				<input name="losuj_10" type="hidden" />
+				<p><input type="submit" value="Losuj 10" /></p>			
+				
+			</form>
+			
+			<form  method="post" action="losuj.php">
+
+				<input name="losuj_8" type="hidden" />
+				<p><input type="submit" value="Losuj 8" /></p>			
+				
+			</form>
+			
+			<form  method="post" action="losuj.php">
+
+				<input name="losuj_6" type="hidden" />
+				<p><input type="submit" value="Losuj 6" /></p>			
+				
+			</form>
+			
+			<form  method="post" action="losuj.php">
+
+				<input name="losuj_4" type="hidden" />
+				<p><input type="submit" value="Losuj 4" /></p>			
+				
+			</form>
+	
 	
 
     <ul>
